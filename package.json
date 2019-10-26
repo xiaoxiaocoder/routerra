@@ -1,0 +1,14 @@
+{
+  "name": "routerra",
+  "version": "1.0.0",
+  "description": "Tiny router library",
+  "main": "./src",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^2.4.0"
+  }
+}
