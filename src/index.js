@@ -11,6 +11,7 @@ module.exports = (config) => {
     let result = null;
     const params = {};
     const search = (r, key) => {
+      if (!key) return r;
       if (r.hasOwnProperty(key)) {
         return r[key];
       } else {
@@ -24,7 +25,7 @@ module.exports = (config) => {
     };
     try {
       result = {
-        handler: split(url).reduce((p, c) => search(p, c), route).$handler,
+        handler: split(url).reduce(search, route).$handler,
         params
       };
     } catch (error) {
